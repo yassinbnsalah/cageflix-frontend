@@ -26,8 +26,8 @@ function SearchComp() {
         <div className="relative w-full max-w-md">
             <input
                 type="text"
-                placeholder="Search Cageflix..."
-                className="w-full rounded-full border border-gray-600 bg-black px-5 py-2 pl-10 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
+                placeholder="Search in Cageflix..."
+                className="w-full rounded-full border border-gray-600  px-5 py-2 pl-10  placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
@@ -49,14 +49,14 @@ function SearchComp() {
             </div>
             <ul className="mt-4 max-h-60 overflow-auto bg-black-800 rounded-lg shadow-lg border border-gray-600">
                 {results.map((movie: Movie, idx) => (
-                    <li key={idx} className="text-white mb-2 px-4 py-2 hover:bg-red-600 rounded-md transition-all">
+                    <li key={idx} className=" mb-2 px-4 py-2 hover:bg-red-600 rounded-md transition-all">
                         <Link href={`/movie/${movie.tconst}`} className="flex items-center">
                             <img
                                 src={movie.poster || 'default-image.png'}
                                 alt={movie.title}
                                 className="w-12 h-16 rounded-md object-cover mr-3"
                             />
-                            <span className="ml-2">
+                            <span className="ml-2 ">
                                 {movie.title} — <em>{movie.genres}</em></span>
                         </Link>
                     </li>
