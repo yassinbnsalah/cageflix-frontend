@@ -24,8 +24,9 @@ function Pagination({ page, setPage, totalPages }:
       <button
         className="px-5 py-2 rounded-full bg-red-600 font-netflix text-white hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
         onClick={() => {
-          setPage((p) => Math.min(totalPages, p + 1));
           window.scrollTo({ top: 0, behavior: "smooth" });
+          setPage((p) => Math.min(totalPages, p + 1));
+         
         }}
         disabled={page === totalPages}
       >
