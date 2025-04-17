@@ -14,7 +14,7 @@ function SearchComp() {
         }
         const fetchResults = async () => {
 
-            const res = await fetch(`http://localhost:5000/api/search?q=${query}`)
+            const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_CAGEFILE+`/api/search?q=${query}`)
             const data = await res.json()
             console.log(data)
             setResults(data)
