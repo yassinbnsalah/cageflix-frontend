@@ -1,7 +1,10 @@
+
 import Link from 'next/link'
 import React from 'react'
 
-function MovieCard({ movie }: any) {
+
+
+function MovieCard({ movie }: { movie: Movie }) {
     return (
         <div
             key={movie.tconst}
@@ -28,7 +31,7 @@ function MovieCard({ movie }: any) {
                 </div>
                 <div className="flex items-center justify-between text-sm text-gray-300  ">
                     <div className="flex items-center gap-2 flex-wrap text-sm text-gray-300">
-                        {movie.genres.split(',').map((genre: any, index: any) => (
+                        {movie.genres.split(',').map((genre: string, index: number) => (
                             <span
                                 key={index}
                                 className="inline-flex items-center rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white ring-1 ring-gray-500/10 ring-inset"

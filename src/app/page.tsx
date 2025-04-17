@@ -4,7 +4,6 @@ import SearchComp from "@/component/search";
 import Navbar from "@/component/shared/navbar";
 import Pagination from "@/component/shared/pagination";
 import axios from "axios";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -51,7 +50,7 @@ export default function Home() {
           ))}
         </div>
 
-      <Pagination page={page} setPage={setPage} totalPages={totalPages} setTotalPages={setTotalPages}></Pagination> 
+      <Pagination page={page} setPage={setPage} totalPages={totalPages} ></Pagination> 
 
       </div>
     </>

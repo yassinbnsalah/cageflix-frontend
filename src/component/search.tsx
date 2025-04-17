@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
@@ -47,7 +48,7 @@ function SearchComp() {
 
             </div>
             <ul className="mt-4 max-h-60 overflow-auto bg-black-800 rounded-lg shadow-lg border border-gray-600">
-                {results.map((movie: any, idx) => (
+                {results.map((movie: Movie, idx) => (
                     <li key={idx} className="text-white mb-2 px-4 py-2 hover:bg-red-600 rounded-md transition-all">
                         <Link href={`/movie/${movie.tconst}`} className="flex items-center">
                             <img

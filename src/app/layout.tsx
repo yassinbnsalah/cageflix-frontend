@@ -1,20 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Cageflix",
-  description: "A Nicolas Cage powered movie experience.",
+  title: 'Cageflix',
+  description: 'A Nicolas Cage powered movie experience.',
 };
 
 export default function RootLayout({
@@ -25,14 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-      <link rel="icon" href="/favicons.png" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} font-bebas antialiased bg-black text-white`}
-      >
-        {children}
-      </body>
+      <body className="font-bebas antialiased bg-black text-white">{children}</body>
     </html>
   );
 }
