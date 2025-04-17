@@ -64,7 +64,7 @@ function Navbar() {
                         <div className="hidden sm:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <Link
                                 href="/"
-                                className="rounded-md bg-dark-900 px-3 pt-5 text-sm font-medium text-white"
+                                className="rounded-md font-netflix-light  uppercase bg-dark-900 px-3 pt-5 text-sm font-medium text-white"
                                 aria-current="page"
                             >
                                 My List
@@ -80,7 +80,7 @@ function Navbar() {
                     <div className="space-y-1 px-2 pt-2 pb-3">
                         <Link
                             href="/"
-                            className="block rounded-md bg-dark-900 px-3 py-2 text-base font-medium text-white"
+                            className="block rounded-md font-netflix-light  bg-dark-900 px-3 py-2 text-base font-medium text-white"
                             aria-current="page"
                         >
                             My List

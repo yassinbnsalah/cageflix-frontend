@@ -8,7 +8,7 @@ function MovieCard({ movie }: { movie: Movie }) {
     return (
         <div
             key={movie.tconst}
-            className="bg-zinc-900 text-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            className="  rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
         >
             <Link href={`/movie/${movie.tconst}`}>
                 <img
@@ -21,7 +21,7 @@ function MovieCard({ movie }: { movie: Movie }) {
 
             <div className="p-4 space-y-2">
                 <Link href={`/movie/${movie.tconst}`}>
-                    <h2 className="text-lg font-bold text-red-500 hover:underline cursor-pointer">
+                    <h2 className="text-lg font-bold text-red-500  cursor-pointer font-netflix-light uppercase ">
                         {movie.title}
                     </h2>
                 </Link>
@@ -34,13 +34,13 @@ function MovieCard({ movie }: { movie: Movie }) {
                         {movie.genres.split(',').map((genre: string, index: number) => (
                             <span
                                 key={index}
-                                className="inline-flex items-center rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white ring-1 ring-gray-500/10 ring-inset"
+                                className="inline-flex font-netflix-light uppercase  items-center rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white ring-1 ring-gray-500/10 ring-inset"
                             >
                                 {genre.trim()}
                             </span>
                         ))}
                     </div>
-                    <p >⭐{movie.rating}</p>
+                    <p >⭐{movie.rating}/10</p>
                 </div>
                 <p className="text-xs text-gray-500 line-clamp-2">{movie.description}</p>
             </div>

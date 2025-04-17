@@ -34,9 +34,9 @@ export default function Home() {
       <Navbar></Navbar>
       <div className="max-w-6xl mx-auto p-4">
 
-        <h1 className="text-4xl font-netflix text-white  text-center">Cageflix</h1>
-        <h1 className="text-1xl font-netflix text-white text-center">
-          A Netflix-style movie library dedicated to the iconic performances of Nicolas Cage.
+        <h1 className="text-8xl font-netflix text-center">Cageflix</h1>
+        <h1 className="text-1xl font-netflix-light  text-center uppercase">
+          A Netflix-style movie library dedicated to the iconic performances of <span className="text-green-700"> Nicolas Cage</span>.
         </h1>
 
         <div className="flex items-center justify-center py-4 px-6">
