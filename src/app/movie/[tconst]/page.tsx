@@ -10,7 +10,7 @@ function DetailMovie() {
     const [movie, setMovie] = useState<Movie | null>(null);
     const fetchMovie = async () => {
         try {
-            const res = await axios.get(`http://localhost:5000/api/cageflix/${tconst}`);
+            const res = await axios.get(process.env.NEXT_PUBLIC_BACKEND_CAGEFILE+`/api/cageflix/${tconst}`);
             console.log(res.data);
             setMovie(res.data);
         } catch (error) {

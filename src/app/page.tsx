@@ -15,7 +15,7 @@ export default function Home() {
 
   const fetchMovies = async (pageNum = 1) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/cageflix?page=${pageNum}&limit=8`);
+      const res = await axios.get(process.env.NEXT_PUBLIC_BACKEND_CAGEFILE+`/api/cageflix?page=${pageNum}&limit=8`);
       console.log(res.data);
 
       setMovies(res.data.results);
