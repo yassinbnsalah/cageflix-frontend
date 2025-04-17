@@ -1,6 +1,8 @@
 "use client"
 import MovieCard from "@/component/movieCard";
+import SearchComp from "@/component/search";
 import Navbar from "@/component/shared/navbar";
+import Pagination from "@/component/shared/pagination";
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -33,31 +35,14 @@ export default function Home() {
       <Navbar></Navbar>
       <div className="max-w-6xl mx-auto p-4">
 
-        <h1 className="text-3xl font-bold mb-6 text-center">🎬 Cageflix Library</h1>
+        <h1 className="text-4xl font-netflix text-white  text-center">Cageflix</h1>
+        <h1 className="text-1xl font-netflix text-white text-center">
+          A Netflix-style movie library dedicated to the iconic performances of Nicolas Cage.
+        </h1>
+
         <div className="flex items-center justify-center py-4 px-6">
-  <div className="relative w-full max-w-md">
-    <input
-      type="text"
-      placeholder="Search Cageflix..."
-      className="w-full rounded-full border border-gray-600 bg-black px-5 py-2 pl-10 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
-    />
-    <div className="absolute left-3 top-2.5 text-gray-400">
-      <svg
-        className="h-5 w-5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1116.65 2a7.5 7.5 0 010 15z"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
+          <SearchComp></SearchComp>
+        </div>
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -66,26 +51,8 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Pagination */}
-        <div className="flex justify-center items-center gap-4 mt-8">
-          <button
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
-            disabled={page === 1}
-          >
-            ← Previous
-          </button>
-          <span className="text-lg font-medium">
-            Page {page} of {totalPages}
-          </span>
-          <button
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-            disabled={page === totalPages}
-          >
-            Next →
-          </button>
-        </div>
+      <Pagination page={page} setPage={setPage} totalPages={totalPages} setTotalPages={setTotalPages}></Pagination> 
+
       </div>
     </>
   );

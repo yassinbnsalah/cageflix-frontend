@@ -56,21 +56,21 @@ function Navbar() {
                     <div className="flex flex-1 items-center mt-2 justify-center sm:items-stretch sm:justify-start">
                         <div className="flex shrink-0 items-center">
                             <img
-                                className="h-12 w-auto"
+                                className="h-15 w-auto"
                                 src="/logo.png"
                                 alt="Cageflix Logo"
                             />
                         </div>
-                        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2">
-                            <Link
-                                href="/"
-                                className="rounded-md bg-dark-900 px-3 py-2 text-sm font-medium text-white"
+                        <div className="hidden sm:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+  <Link
+    href="/"
+    className="rounded-md bg-dark-900 px-3 pt-5 text-sm font-medium text-white"
+    aria-current="page"
+  >
+    My List
+  </Link>
+</div>
 
-                                aria-current="page"
-                            >
-                                My List
-                            </Link>
-                        </div>
                     </div>
 
                 </div>
