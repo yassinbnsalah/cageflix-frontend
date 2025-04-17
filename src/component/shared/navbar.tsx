@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <nav className="bg-black">
+        <nav className="">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -57,14 +57,14 @@ function Navbar() {
                         <div className="flex shrink-0 items-center">
                             <img
                                 className="h-15 w-auto"
-                                src="/logo.png"
+                                src="/logo1.png"
                                 alt="Cageflix Logo"
                             />
                         </div>
                         <div className="hidden sm:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <Link
                                 href="/"
-                                className="rounded-md font-netflix-light  uppercase bg-dark-900 px-3 pt-5 text-sm font-medium text-white"
+                                className="rounded-md font-netflix-light  uppercase bg-dark-900 px-3 pt-5 text-sm font-medium"
                                 aria-current="page"
                             >
                                 My List
@@ -80,7 +80,7 @@ function Navbar() {
                     <div className="space-y-1 px-2 pt-2 pb-3">
                         <Link
                             href="/"
-                            className="block rounded-md font-netflix-light  bg-dark-900 px-3 py-2 text-base font-medium text-white"
+                            className="block rounded-md font-netflix-light uppercase bg-dark-900 px-3 py-2 text-base font-medium "
                             aria-current="page"
                         >
                             My List
