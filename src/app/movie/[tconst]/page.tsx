@@ -2,7 +2,6 @@
 
 import Navbar from '@/component/shared/navbar'
 import axios from 'axios';
-import { log } from 'console';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
@@ -21,6 +20,7 @@ function DetailMovie() {
     useEffect(() => {
         fetchMovie();
     }, [tconst]);
+    
     if (!movie) {
         return <div>Loading...</div>;
     }
@@ -34,7 +34,7 @@ function DetailMovie() {
 
                         <div className="flex-shrink-0 relative">
 
-                            <img
+                            <img 
                                 src={movie.Poster ? movie.Poster : "/default-image.png"}
                                 alt={movie.title}
                                 className="w-full max-w-xs lg:max-w-sm rounded-2xl shadow-2xl ring-2 ring-red-600"

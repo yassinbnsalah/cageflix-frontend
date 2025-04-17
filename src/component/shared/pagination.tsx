@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function Pagination({page , setPage ,totalPages , setTotalPages}:
-     {page: number , setPage: React.Dispatch<React.SetStateAction<number>> , totalPages: number , setTotalPages: React.Dispatch<React.SetStateAction<number>>}) {
+function Pagination({page , setPage ,totalPages }:
+     {page: number , setPage: React.Dispatch<React.SetStateAction<number>> , totalPages: number }) {
 
   return (
     <div className="flex justify-center items-center space-x-6 mt-10">

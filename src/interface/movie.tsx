@@ -18,6 +18,8 @@ interface Movie {
     Language: string;
     Country: string;
     Awards: string;
+    rating: string;
+    description: string;
     Poster: string;
     Ratings: Array<{
       Source: string;
