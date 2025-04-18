@@ -41,24 +41,33 @@ function DetailMovie() {
         <>
             <Navbar />
             <div className="min-h-screen py-10 px-4 md:px-10">
-                <h1 className="text-4xl font-netflix mb-2">{movie.title} - {movie.year}</h1>
-                <Link
-                    href={`https://www.imdb.com/fr/title/${tconst}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-yellow-400 text-sm mb-4 flex items-center gap-2"
-                >
-                    IMDb page
-                </Link>
-                {trailerKey && (
-                    <TrailerComp
-                        trailerTitle={trailerTitle}
-                        trailerKey={trailerKey}
-                    />
-                )}
+                <div className="justify-center items-center flex flex-col mb-10">
+                    <h1 className="text-4xl font-netflix mb-2">
+                        {movie?.title ?? "Untitled Movie"}{movie?.year ? ` - ${movie.year}` : ""}
+                    </h1>
+                    <Link
+                        href={`https://www.imdb.com/fr/title/${tconst}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-400 text-sm mb-4 flex items-center gap-2"
+                    >
+                        IMDb page
+                    </Link>
+                </div>
+
+
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
                     <MovieInfo movie={movie} />
                 </div>
+                <div className="justify-center items-center flex flex-col mt-10">
+
+                    {trailerKey && (
+                        <>   <h2 className="text-3xl font-netflix mb-4">Offical Trailer</h2>
+                            <TrailerComp
+                                trailerTitle={trailerTitle}
+                                trailerKey={trailerKey}
+                            /></>
+                    )}</div>
             </div>
         </>
     );
