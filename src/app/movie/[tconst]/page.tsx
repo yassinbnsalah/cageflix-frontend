@@ -67,7 +67,7 @@ function DetailMovie() {
                                 trailerTitle={trailerTitle}
                                 trailerKey={trailerKey}
                             /></>
-                    )}</div>
+                    )}</div> 
             </div>
         </>
     );
