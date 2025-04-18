@@ -45,6 +45,10 @@ A Netflix-like web application built with Next.js. It allows users to explore mo
 - Tailwind CSS
 - Docker
 - Vercel for deployment
+- 
+## Live Version
+
+You can view the live version of the project here: [Cageflix Frontend](https://cageflix-frontend.vercel.app/)
 
 ## Learn More
 
