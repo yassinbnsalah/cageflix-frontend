@@ -1,5 +1,7 @@
 'use client'
 
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 
 export default function ThemeToggle() {
@@ -22,7 +24,7 @@ export default function ThemeToggle() {
 
   return (
     <button onClick={toggleTheme} className="px-4 py-2  rounded font-netflix">
-       {theme === 'light' ? '🌙' : '☀️ '} 
+      <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} className="text-xl" />
     </button>
   )
 }

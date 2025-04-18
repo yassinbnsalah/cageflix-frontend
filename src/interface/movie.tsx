@@ -24,6 +24,7 @@ interface Movie {
   website?: string;
   response?: string;
   poster: string;
+  watchlisted: boolean;
   rating: string;
   description: string;
   ratings: Array<{

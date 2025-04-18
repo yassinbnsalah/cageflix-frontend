@@ -18,8 +18,6 @@ function DetailMovie() {
             const res = await axios.get(
                 `${process.env.NEXT_PUBLIC_BACKEND_CAGEFILE}/api/cageflix/${tconst}`
             );
-            console.log("Movie data:", res.data);
-
             setMovie(res.data);
         } catch (error) {
             console.error("Failed to fetch movie data:", error);
@@ -59,7 +57,6 @@ function DetailMovie() {
                     />
                 )}
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
-
                     <MovieInfo movie={movie} />
                 </div>
             </div>
