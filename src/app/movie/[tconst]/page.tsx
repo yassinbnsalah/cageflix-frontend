@@ -62,7 +62,7 @@ function DetailMovie() {
                 <div className="justify-center items-center flex flex-col mt-10">
 
                     {trailerKey && (
-                        <>   <h2 className="text-3xl font-netflix mb-4">Offical Trailer</h2>
+                        <>   <h2 className="text-3xl font-netflix mb-4">Official Trailer</h2>
                             <TrailerComp
                                 trailerTitle={trailerTitle}
                                 trailerKey={trailerKey}
