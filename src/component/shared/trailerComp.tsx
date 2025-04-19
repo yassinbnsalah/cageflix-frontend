@@ -1,5 +1,6 @@
 import React from 'react'
 
+// This component is used to show the trailer of the movie
 function TrailerComp({ trailerKey, trailerTitle }:
     { trailerKey: string, trailerTitle: string }) {
     return (

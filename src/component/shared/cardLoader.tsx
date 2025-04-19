@@ -1,6 +1,7 @@
 import React from 'react'
 import Loading from './loading'
-
+// Default Card Loader Component
+// This component is used to show a loading state for the movie cards
 function CardLoad() {
     return (
         <div className="animate-pulse bg-dark-900 rounded-lg  shadow-md">

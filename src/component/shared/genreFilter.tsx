@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-
+// Genre Filter Component
+// This component is used to filter movies by genre
+// I didn't added this filter for UX reason, :) 
 function GenreFilter() {
     const genres = ['War', 'Comedy', 'Drama', 'Crime', 'Romance','Biography', 'Fantasy','sport', 'music','adventure','thriller','Documentary','Action','Mystery'];
   const [selectedGenres, setSelectedGenres] = useState<string[]>([]);

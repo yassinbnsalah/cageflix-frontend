@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 function DetailMovie() {
     const { tconst } = useParams();
     const [movie, setMovie] = useState<Movie | null>(null);
-
+    // Fetch movie data from the backend using the tconst parameter
     const fetchMovie = async () => {
         try {
             const res = await axios.get(

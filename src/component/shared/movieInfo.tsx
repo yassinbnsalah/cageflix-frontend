@@ -1,7 +1,7 @@
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-
+// MovieInfo Component for displaying movie details
 function MovieInfo({ movie }: { movie: Movie }) {
     return (
         <>

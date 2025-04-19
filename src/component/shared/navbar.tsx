@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
-
+// Simple Navbar Component 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
