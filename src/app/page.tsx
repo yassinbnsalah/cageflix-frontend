@@ -18,7 +18,7 @@ export default function Home() {
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
 
-
+  // Fetch movies data from the backend
   const fetchMovies = async (pageNum = 1) => {
     setLoading(true);
     try {

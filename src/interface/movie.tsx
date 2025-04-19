@@ -1,3 +1,4 @@
+// This file contains the Movie interface definition for the Cageflix application.
 interface Movie {
   tconst: string;
   title: string;

@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-
+// Search component for searching movies in Cageflix with Fuzz search
 function SearchComp() {
     const [query, setQuery] = useState("")
     const [results, setResults] = useState([])
